@@ -1,6 +1,6 @@
-FROM centos:latest
+FROM centos:centos7
 MAINTAINER Frederic Bourbigot <frederic.bourbigot@gmail.com>
-RUN rpm -Uvh http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum install nodejs npm -y 
 COPY ./src /opt/src
 RUN cd /opt/src; npm install
